@@ -12,7 +12,7 @@ const pool = new Pool({
   PGUSER: process.env.PGUSER,
   PGDATABASE: process.env.USER,
   PGPASSWORD: process.env.PGPASSWORD,
-  PGPORT: 5432,
+  PGPORT: process.env.PGPORT,
 });
 
 app.get("/api/recipes", (req, res) => {
